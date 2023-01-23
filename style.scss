@@ -1,0 +1,53 @@
+$utilities : (
+  "width": (
+    property: width,
+    class: w,
+    responsive : true ,
+    values: (
+      25: 25%,
+      35: 35%,
+      40 :40%,
+      50: 50%,
+      60 : 60% ,
+      70 : 70%,
+      75: 75%,
+      100: 100%,
+      auto: auto
+    )
+  )
+  );
+
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  background: rgb(103, 212, 241);
+  padding: clamp(20px, 20vw, 200px) 20px 0;
+}
+
+#hex1 , #hex2 {
+    width: 300px;
+    height: 70px;
+    margin: auto;
+}
+#rangeColor {
+    width: 200px;
+}
+#orientation {
+    min-width: 150px;
+    max-width: 200px;
+    height: 40px;
+    margin: auto;
+}
+input[type=color]::-webkit-color-swatch {
+    display: none;
+}
