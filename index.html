@@ -15,20 +15,19 @@
                         <div class="col-12"><input type="range" name="" id="rangeColor" class="form-range" min="0" max="360" value="90"></div>
                         <div class="col-12">
                             <div class="rounded p-2 bg-light" id="orientation">
-                                <p>Orientation : <span>90 °C</span></p>
+                                <p>Orientation : <span id="degValue">90</span>°</p>
                             </div>
                         </div>
                         <div class="col-12">
-                            <div class="d-grid gap-2 d-sm-block text-center">
-                                <button class="btn btn-primary" type="button">copier</button>
-                                <button class="btn btn-primary" type="button">random</button>
+                            <div class="d-grid gap-2 d-sm-block text-center position-relative">
+                                <button class="btn btn-primary" type="button" id="copyBtn" >copier</button>
+                                <button class="btn btn-primary" type="button" id="randomBtn">random</button>
                             </div>
                         </div>
                 </div>
                 </div>
                     
     </form>
-
 
     <script src="app.js"></script>
 </body>
