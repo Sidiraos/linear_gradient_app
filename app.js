@@ -10,6 +10,9 @@ let bgLinearCode;
 
 hex1.style.backgroundColor = hex1.value;
 hex2.style.backgroundColor = hex2.value;
+hex1.setAttribute('data-color' , `${hex1.value}`);
+hex2.setAttribute('data-color' , `${hex2.value}`);
+
 bgLinearCode = `linear-gradient(${rangeColor.value}deg , ${hex1.value} , ${hex2.value})`;
 body.style.background = bgLinearCode;
 
@@ -23,6 +26,9 @@ function changeInputBackgroundColor () {
     hex2.style.backgroundColor = hex2.value;
     body.style.background = `linear-gradient(${rangeColor.value}deg , ${hex1.value} , ${hex2.value})`;
     document.querySelector('#degValue').textContent = rangeColor.value;
+    hex1.setAttribute('data-color' , `${hex1.value}`);
+    hex2.setAttribute('data-color' , `${hex2.value}`);
+
  }
 // copy text
 copyBtn.addEventListener('click' , copyText) ;
@@ -30,6 +36,13 @@ copyBtn.addEventListener('click' , copyText) ;
 function copyText(e) { 
     navigator.clipboard.writeText(bgLinearCode).then(()=>{
         console.log("le texte a été copié") ;
+        // document.getElementById('copied').style.display = "block";
+        $('#copied').fadeIn();
+
+        setTimeout(()=>{
+            // document.getElementById('copied').style.display = "none";
+            $('#copied').fadeOut();
+        } , 1000)
         // afficher la tooltip
     } , (err) => {
         console.log("failed copy " , err)

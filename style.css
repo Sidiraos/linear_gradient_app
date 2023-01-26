@@ -11118,4 +11118,27 @@ body {
 
 input[type=color]::-webkit-color-swatch {
   display: none;
+}
+
+#copied {
+  width: 70px;
+  margin: auto;
+  display: none;
+}
+
+input[type=color]::after {
+  content: attr(data-color);
+  display: block;
+  height: 70px;
+  position: absolute;
+  padding-left: 30px;
+  font-size: x-large;
+}
+
+#hex1::after {
+  top: 40px;
+}
+
+#hex2::after {
+  top: 125px;
 }/*# sourceMappingURL=style.css.map */
