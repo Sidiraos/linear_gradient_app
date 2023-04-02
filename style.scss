@@ -64,6 +64,7 @@ input[type="color"]::after {
   position: absolute;
   padding-left: 30px;
   font-size: x-large;
+  // color : attr(style);
 
 }
 #hex1::after {
